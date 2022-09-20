@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ressert.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/ressert.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Index</title>
 </head>
 <body>
-    <section class="pizarron">
-        <div>
-            <img class="logo" src="Vector (1).png" alt="Logo de Alura">
-            <img class="image-horca" src="horca.png" alt="">
-        </div>
+    <main>
+        <section class="pizarron">
+            <div>
+                <img class="logo" src="imagenes/Vector (1).png" alt="Logo de Alura">
+                <img class="image-horca" src="imagenes/horca.png" alt="" id="image-horca">
+            </div>
+    
+            <div class="button-container">
+                <input  class="start" type="submit" value="Iniciar Juego" id="iniciar-juego" onclick="iniciarJuego()">
+                <input  class="add-word" type="submit" value="Agregar Palabra" id="agregar-palabra">
+            </div>
+        </section>
+    </main>
 
-        <div class="button-container">
-           <a href="inicio.html"><button class="start">Iniciar Juego</button></a>
-           <a href=""><button class="add-word">Agregar nueva palabra</button></a>
+    <footer>
+           <a href="portafolio.com"><p class="nombre-empresa">Uziel Munoz <br> Front-end Developer</p></a>
+        <div class="social-media-container" >
+           <a href="https://github.com/Uzielmf" target="_blank"><img class="social-media-git" src="Logos/github (1).png" alt=""></a>
+           <a href="https://www.instagram.com/uzyel_munoz/" target="_blank"><img class="social-media" src="Logos/instagram.png" alt=""></a>
+           <a href="https://www.linkedin.com/in/uziel-munozf/" target="_blank"><img class="social-media" src="Logos/linkedin (1).png" alt=""></a>
         </div>
-    </section>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -26,6 +26,7 @@ body{
    position: absolute;
    top: 25%;
    left: 15%;
+   display: block;
 }
 
 .button-container{
@@ -47,8 +48,8 @@ body{
     flex-direction: row;
     align-items: center;
     
-    width: 60%;
-    height: 40%;
+    width: 40vmin;
+    height: 10vmin;
     
     background: #56d2a7;
     border-radius: 20px;
@@ -74,8 +75,8 @@ body{
 }
 
 .add-word{
-    width: 60%;
-    height: 40%;
+    width: 40vmin;
+    height: 10vmin;
     
     background: #9ebee3;
     
@@ -113,4 +114,44 @@ a:hover{
 
 a:active{
     color: white;
+}
+
+footer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: -10vmin;
+    width: 100%;
+    background-color: #608969;
+    height: 10vmin;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Oswald', sans-serif;
+    font-family: monospace;
+    font-size: 15px;
+    }
+    
+    
+.social-media{
+    margin: 0 3vmin ;
+    width: 2.5vmax;
+    }
+
+.social-media-git{
+    margin: 0 3vmin ;
+    width: 2.5vmax;
+    background-color: rgb(180, 216, 247);
+    border-radius: 30px;
+    }
+
+.nombre-empresa:hover{
+    color: bisque;
+    scale: 1.3;
+    transition: .5s;
+}
+
+.social-media:hover, .social-media-git:hover{
+    scale: 1.4;
+    transition: .5s;
 }
