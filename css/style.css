@@ -26,7 +26,6 @@ body{
    position: absolute;
    top: 25%;
    left: 15%;
-   display: block;
 }
 
 .button-container{
@@ -136,6 +135,7 @@ footer{
 .social-media{
     margin: 0 3vmin ;
     width: 2.5vmax;
+    border-radius: 25px;
     }
 
 .social-media-git{
@@ -154,4 +154,5 @@ footer{
 .social-media:hover, .social-media-git:hover{
     scale: 1.4;
     transition: .5s;
+    box-shadow: 5px 5px 5px black;
 }
