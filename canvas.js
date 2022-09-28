@@ -29,3 +29,25 @@ function dibujarLinea() {
     tablero.stroke();
     tablero.closePath();
 }
+
+function escribirLetraCorrecta(index) {
+    tablero.font = "bold 63px monospace";
+    tablero.lineWidth = 6;
+    tablero.lineCap= "round";
+    tablero.lineJoin= "round";
+    tablero.fillRect=  "#052606";
+
+    let anchura = 600/palabraSecreta.length;
+    tablero.fillText(palabraSecreta[index], 205 + (anchura*index),330)
+    tablero.stroke()
+}
+
+function escribirLetraIncorrecta(letra, errorLeft) {
+    tablero.font = "bold 40px monospace";
+    tablero.lineWidth = 6;
+    tablero.lineCap= "round";
+    tablero.lineJoin= "round";
+    tablero.fillRect=  "#052606";
+
+    tablero.fillText(letra, 235 + (40 * (10-errorLeft)), 420,40 )
+}

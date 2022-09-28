@@ -3,6 +3,7 @@ let palabras =["ALURA","ORACLE","ONE","LEPEPE","YAVUELVA","UZIEL", "CHIQUITA"];
 let tablero = document.getElementById("horca").getContext("2d");
 let palabraSecreta = "";
 let letras = [];
+let errores = 8;
 
 
 //Funcion para la palabra secreta
@@ -25,6 +26,11 @@ function comprobarLetra(key) {
     }
 }
 
+function anadirLetraCorrecta() {
+    errores = -1;
+    console.log(errores);
+}
+
 //Funcion para inicar el juego (borra los elementos)
 function iniciarJuego(){
     document.getElementById("iniciar-juego").style.display = "none";
@@ -37,6 +43,16 @@ function iniciarJuego(){
 
     document.onkeydown = (e) => {
         let letra = e.key.toUpperCase()
-        comprobarLetra(letra) 
+
+    if (comprobarLetra(letra) && palabraSecreta.includes(letra)) {
+        for (let i = 0; i < palabraSecreta.length; i++) {
+            if (palabraSecreta[i] === letra) {
+                escribirLetraCorrecta(i)
+            };            
+        }
+    }else{
+        anadirLetraCorrecta(letra)
+        escribirLetraIncorrecta(letra,errores)
+    }
     }
 }
