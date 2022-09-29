@@ -13,6 +13,7 @@ function escojerPalabraSecreta() {
     console.log(palabraSecreta);
 }
 
+//funcion para comprobrar que la tecla sea una letra
 function comprobarLetra(key) {
     let estado = false;
     if (key > 65 && letras.indexOf(key) || key <= 90 && letras.indexOf(key)) {
@@ -26,9 +27,12 @@ function comprobarLetra(key) {
     }
 }
 
+
+//funcion para contar los errores
 function anadirLetraCorrecta() {
-    errores = -1;
+    errores -= 1;
     console.log(errores);
+    
 }
 
 //Funcion para inicar el juego (borra los elementos)
@@ -53,6 +57,25 @@ function iniciarJuego(){
     }else{
         anadirLetraCorrecta(letra)
         escribirLetraIncorrecta(letra,errores)
+
+        switch (errores) {
+            case 7: dibujarPrimerTrazo()
+                break
+            case 6: dibujarSegundoTrazo()
+                break
+            case 5: dibujarTercerTrazo()
+                break
+            case 4: dibujarCuartoTrazo()
+                break
+            case 3: dibujarQuintoTrazo()
+                break
+            case 2: dibujarSextoTrazo()
+                break
+            case 1: dibujarSeptimoTrazo()
+                break
+            default: console.log("por un carajo no funciono");
+        }
+            
+        }
     }
     }
-}

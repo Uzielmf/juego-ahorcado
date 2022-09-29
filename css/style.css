@@ -7,6 +7,7 @@ body{
     position: absolute;
     width: 97%;
     height: 92%;
+    background: white;
     background: #052606;
     top: 4%;
     left: 1.5%;
@@ -156,3 +157,4 @@ footer{
     transition: .5s;
     box-shadow: 5px 5px 5px black;
 }
+
