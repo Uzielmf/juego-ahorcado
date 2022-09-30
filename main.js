@@ -1,5 +1,5 @@
 //SELECTORES
-let palabras =["ALURA","ORACLE","ONE","LEPEPE","YAVUELVA","UZIEL", "CHIQUITA"];
+let palabras =["ALURA","ORACLE","ONE","HOLA","AZUL","UZIEL", "HORCA"];
 let tablero = document.getElementById("horca").getContext("2d");
 let palabraSecreta = "";
 let letras = [];
@@ -44,6 +44,7 @@ function iniciarJuego(){
     escojerPalabraSecreta()
     dibujarCanvas()
     dibujarLinea()
+    
 
     document.onkeydown = (e) => {
         let letra = e.key.toUpperCase()
@@ -57,25 +58,32 @@ function iniciarJuego(){
     }else{
         anadirLetraCorrecta(letra)
         escribirLetraIncorrecta(letra,errores)
+        }
 
-        switch (errores) {
-            case 7: dibujarPrimerTrazo()
-                break
-            case 6: dibujarSegundoTrazo()
-                break
-            case 5: dibujarTercerTrazo()
-                break
-            case 4: dibujarCuartoTrazo()
-                break
-            case 3: dibujarQuintoTrazo()
-                break
-            case 2: dibujarSextoTrazo()
-                break
-            case 1: dibujarSeptimoTrazo()
-                break
-            default: console.log("por un carajo no funciono");
-        }
-            
-        }
+    switch (errores) {
+        case 8:
+            break
+        case 7: dibujarPrimerTrazo()
+                dibujarSegundoTrazo()
+            break
+        case 6: dibujarTercerTrazo()
+            break
+        case 5: dibujarCuartoTrazo()
+            break
+        case 4: dibujarQuintoTrazo()
+             break
+        case 3: dibujarSextoTrazo()
+             break
+         case 2: dibujarSeptimoTrazo()
+             break
+         case 1: dibujarOctavoTrazo()
+             break
+         case 0: dibujarNovenoTrazo()
+         alert("lo siento perdio el juego");
+         break
+         default: confirm("Volver a Jugar")
+         }
     }
     }
+
+    
