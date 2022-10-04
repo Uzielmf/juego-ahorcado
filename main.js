@@ -86,4 +86,19 @@ function iniciarJuego(){
     }
     }
 
+    //Funcion para agregar una nueva palabra
+    function agregarPalabra() {
+        document.getElementById("iniciar-juego").style.display = "none";
+        document.getElementById("image-horca").style.display = "none";
+        document.getElementById("agregar-palabra").style.display = "none";
+
+        document.section.innerHTML = "textarea"
+    }
     
+/*podria construirlo apartir de que pararezca con un innerhtml el input para que se ingrese la palabra que se deas, esto en lugar de otra pagiuna html que podria seer la segunda opcion
+
+La forma de agregar la alerta de que se ah perdido o ganado sera atraves de un do while para que se ejecute la primera acction y luego aparezca la alerta al perder
+
+ 
+
+*/
