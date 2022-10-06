@@ -79,9 +79,15 @@ function iniciarJuego(){
          case 1: dibujarOctavoTrazo()
              break
          case 0: dibujarNovenoTrazo()
-         alert("lo siento perdio el juego");
          break
-         default: confirm("Volver a Jugar")
+         }
+         while (errores == 0) {
+            if (confirm("Lo siento, ha perdido!\n¿Quiere volver a Jugar?") == true) {
+                location. reload()
+             } else {
+                alert("gracias por jugar")
+             } 
+             errores -=1;
          }
     }
     }
